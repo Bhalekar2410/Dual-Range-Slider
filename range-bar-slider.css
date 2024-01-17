@@ -1,0 +1,89 @@
+/* Container for the range sliders */
+.range_container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;        /* Set width to 50% of the parent container */
+  margin: 35% auto;  /* Center the container horizontally with a top margin */
+}
+
+/* Styling for the container of sliders and associated form controls */
+.sliders_control {
+  position: relative;
+  min-height: 50px;  /* Set a minimum height for better visibility */
+}
+
+/* Styling for the form controls */
+.form_control {
+  position: relative;
+  display: flex;
+  justify-content: space-between;  /* Space evenly between form controls */
+  font-size: 24px;                 /* Set font size for better readability */
+  color: #635a5a;                  /* Text color */
+}
+
+/* Styling for the range slider thumb in WebKit browsers */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
+  background-color: #c4f5b1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #8edfa2;
+  cursor: pointer;
+}
+
+/* Styling for the range slider thumb in Firefox */
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
+  background-color: #c4f5b1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #8edfa2;
+  cursor: pointer;
+}
+
+/* Hover effect for the range slider thumb in WebKit browsers */
+input[type=range]::-webkit-slider-thumb:hover {
+  background: #cbe4c2;
+}
+
+/* Active state styling for the range slider thumb in WebKit browsers */
+input[type=range]::-webkit-slider-thumb:active {
+  box-shadow: inset 0 0 3px #387bbe, 0 0 9px #387bbe;
+  -webkit-box-shadow: inset 0 0 3px #6fa7d8, 0 0 9px #387bbe;
+}
+
+/* Styling for the number input field */
+input[type="number"] {
+  color: #8a8383;  /* Text color */
+  width: 50px;
+  height: 30px;
+  font-size: 15px;  /* Set font size for better readability */
+  border: none;     /* Remove border */
+}
+
+/* Styling for the number input field spinner buttons in WebKit browsers */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;  /* Ensure spinner buttons are fully visible */
+}
+
+/* Styling for the range slider track */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;          /* Set height of the track */
+  width: 100%;
+  position: absolute;
+  background-color: #C6C6C6;  /* Default background color for the track */
+  pointer-events: none;      /* Disable pointer events on the track */
+}
+
+/* Styling for the "fromSlider" element */
+#fromSlider {
+  height: 0;      /* Hide the "fromSlider" element */
+  z-index: 1;     /* Set z-index to 1 for positioning */
+}
